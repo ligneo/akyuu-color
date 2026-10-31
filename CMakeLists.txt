@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(akyuu_colors LANGUAGES CXX)
+find_package(Qt6 6.6 REQUIRED COMPONENTS Widgets)
+find_package(KF6ColorScheme REQUIRED)
+add_executable(export-qt-palettes tools/export-qt-palettes.cpp)
+target_link_libraries(export-qt-palettes PRIVATE Qt6::Widgets KF6::ColorScheme)
